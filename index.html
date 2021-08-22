@@ -53,21 +53,44 @@
 
           <ul class="features__list">
             <li class="features__item card">
-              <img
-                src="img/camera.jpg"
-                alt="новый модуль камер"
-                class="card__picture"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/camera-2x.avif 1x, img/camera-2x.avif 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/camera.webp 1x, img/camera-2x.webp 2x"
+                />
+
+                <img
+                  src="img/camera.jpg"
+                  srcset="img/camera-2x.jpg 2x"
+                  alt="новый модуль камер"
+                  class="card__picture"
+                />
+              </picture>
               <h3 class="card__title">Камера</h3>
               <p class="card__description">Система камер PRO.</p>
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/compect.jpg"
-                alt="комплектация телефона"
-                class="card__picture"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/compect.avif 1x, img/compect-2x.avif 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/compect.webp 1x, img/compect-2x.webp 2x"
+                />
+                <img
+                  src="img/compect.jpg"
+                  srcset="img/compect-2x.jpg 2x"
+                  alt="комплектация телефона"
+                  class="card__picture"
+                />
+              </picture>
               <h3 class="card__title">Комплектация</h3>
               <p class="card__description">
                 Зарядное устройство. Беспроводные наушники.
@@ -75,21 +98,45 @@
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/color.jpg"
-                alt="новые цвета"
-                class="card__picture"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/color.avif 1x, img/color-2x.avif 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/color.webp 1x, img/color-2x.webp 2x"
+                />
+
+                <img
+                  src="img/color.jpg"
+                  srcset="img/color-2x.jpg 2x"
+                  alt="новые цвета"
+                  class="card__picture"
+                />
+              </picture>
               <h3 class="card__title">Цвет</h3>
               <p class="card__description">Глубоководный синий. Графитовый.</p>
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/frame.jpg"
-                alt="корпус телефона"
-                class="card__picture"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/frame.avif 1x, img/frame-2x.avif 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/frame.webp 1x, img/frame-2x.webp 2x"
+                />
+
+                <img
+                  src="img/frame.jpg"
+                  srcset="img/frame-2x.jpg 2x"
+                  alt="корпус телефона"
+                  class="card__picture"
+                />
+              </picture>
               <h3 class="card__title">Корпус</h3>
               <p class="card__description">
                 Водонипроницаемый и противоударный корпус.
@@ -97,7 +144,23 @@
             </li>
 
             <li class="features__item card">
-              <img src="img/line.jpg" alt="линейка" class="card__picture" />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="img/line.avif 1x, img/line-2x.avif 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/line.webp 1x, img/line-2x.webp 2x"
+                />
+
+                <img
+                  src="img/line.jpg"
+                  srcset="img/line-2x.jpg 2x"
+                  alt="линейка"
+                  class="card__picture"
+                />
+              </picture>
               <h3 class="card__title">Линейка</h3>
               <p class="card__description">
                 iPhone 13, iPhone 13 mini, iPhone 13 Pro и 13 Pro Max.
@@ -105,11 +168,29 @@
             </li>
 
             <li class="features__item card">
-              <img
-                src="img/charger_magnetic.jpg"
-                alt="аккумулятор-магнит"
-                class="card__picture"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="
+                    img/charger_magnetic.avif    1x,
+                    img/charger_magnetic-2x.avif 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/charger_magnetic.webp    1x,
+                    img/charger_magnetic-2x.webp 2x
+                  "
+                />
+
+                <img
+                  src="img/charger_magnetic.jpg"
+                  srcset="img/charger_magnetic-2x.jpg 2x"
+                  alt="аккумулятор-магнит"
+                  class="card__picture"
+                />
+              </picture>
               <h3 class="card__title">Зарядка</h3>
               <p class="card__description">Аккумулятор-магнит.</p>
             </li>
