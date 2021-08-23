@@ -5,8 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iPhone 13</title>
     <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/choices.min.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="img/apple.svg" />
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/SFUIText-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script defer src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/choices.min.js"></script>
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <header class="header">
@@ -202,40 +228,71 @@
         <div class="container">
           <h2 class="order__title">Оформить предзаказ</h2>
 
-          <form action="#" class="order__form form">
+          <form
+            action="https://jsonplaceholder.typicode.com/posts"
+            method="POST"
+            class="order__form form"
+            id="form-order"
+          >
             <fieldset class="form__box">
               <legend class="form__title-box">Персональные данные</legend>
 
-              <label for="fullName" class="form__label">ФИО</label>
+              <label for="fullName" class="form__label">ФИО<sup>*</sup></label>
               <input
                 type="text"
                 class="form__input"
                 id="fullName"
                 name="fullName"
+                required
               />
 
-              <label for="phone" class="form__label">Телефон</label>
-              <input type="text" class="form__input" id="phone" name="phone" />
+              <label for="phone" class="form__label">Телефон<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="phone"
+                name="phone"
+                required
+              />
 
-              <label for="email" class="form__label">E-mail</label>
-              <input type="email" class="form__input" id="email" name="email" />
+              <label for="email" class="form__label">E-mail<sup>*</sup></label>
+              <input
+                type="email"
+                class="form__input"
+                id="email"
+                name="email"
+                required
+              />
             </fieldset>
 
             <fieldset class="form__box">
               <legend class="form__title-box">Адрес доставки</legend>
 
-              <label for="city" class="form__label">Город</label>
-              <input type="text" class="form__input" id="city" name="city" />
+              <label for="city" class="form__label">Город<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="city"
+                name="city"
+                required
+              />
 
-              <label for="index" class="form__label">Индекс</label>
-              <input type="text" class="form__input" id="index" name="index" />
+              <label for="index" class="form__label">Индекс<sup>*</sup></label>
+              <input
+                type="text"
+                class="form__input"
+                id="index"
+                name="index"
+                required
+              />
 
-              <label for="address" class="form__label">Адрес</label>
+              <label for="address" class="form__label">Адрес<sup>*</sup></label>
               <input
                 type="text"
                 class="form__input"
                 id="address"
                 name="address"
+                required
               />
             </fieldset>
 
@@ -269,33 +326,45 @@
               <legend class="form__title-box">Аксессуары</legend>
 
               <label class="form__label checkbox">
-                <input type="checkbox" name="accessories" id="case" />Чехол
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  name="accessories"
+                  value="case"
+                />Чехол
               </label>
 
               <label class="form__label checkbox">
                 <input
+                  class="checkbox__input"
                   type="checkbox"
                   name="accessories"
-                  id="AirPods"
+                  value="AirPods"
                 />Наушники AirPods 3
               </label>
 
               <label class="form__label checkbox">
-                <input type="checkbox" name="accessories" id="glass" />Защитное
-                стекло
+                <input
+                  class="checkbox__input"
+                  type="checkbox"
+                  name="accessories"
+                  value="glass"
+                />Защитное стекло
               </label>
 
               <label class="form__label checkbox">
                 <input
+                  class="checkbox__input"
                   type="checkbox"
                   name="accessories"
-                  id="MagSafe"
+                  value="MagSafe"
                 />Зарядное устройство MagSafe
               </label>
             </fieldset>
-
-            <button type="submit" class="form__submit btn">Оформить</button>
           </form>
+          <button type="submit" class="form__submit btn" form="form-order">
+            Оформить
+          </button>
         </div>
       </section>
     </main>
